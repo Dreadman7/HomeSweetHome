@@ -1,5 +1,5 @@
 
-public class Facade {
+public class Facade implements Device {
 	
 	Amplifier amplifier;
 	Tuner tuner;
@@ -17,6 +17,22 @@ public class Facade {
 		projector = new Projector();
 		lights = new Lights();
 	}
+
+	@Override
+	public void on() {
+		// TODO Auto-generated method stub
+		amplifier.on();
+		projector.on();
+	}
+
+	@Override
+	public void off() {
+		// TODO Auto-generated method stub
+		amplifier.off();
+		projector.off();
+		
+	}
+	
 	
 	
 
